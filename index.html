@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Boyfriend Day ❤️</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#fff0f6,#ffe1ec);
+  color:#6b2945;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+.page{
+  min-height:100vh;
+  padding:30px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.hidden{
+  display:none !important;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+h1{
+  font-size:38px;
+  margin:10px 0;
+  color:#d6336c;
+  text-shadow:0 2px 8px rgba(214,51,108,.2);
+}
+
+.subtitle{
+  font-size:18px;
+}
+
+.startBtn{
+  margin-top:28px;
+  border:none;
+  background:#d6336c;
+  color:white;
+  padding:14px 30px;
+  border-radius:30px;
+  font-size:17px;
+  box-shadow:0 8px 20px rgba(214,51,108,.3);
+  cursor:pointer;
+}
+
+
+/* =========================
+   KISSES
+========================= */
+
+.kiss{
+  position:fixed;
+  top:-50px;
+  font-size:25px;
+  animation:fall linear infinite;
+  opacity:.8;
+  z-index:0;
+  pointer-events:none;
+}
+
+@keyframes fall{
+
+  0%{
+    transform:translateY(-60px) rotate(0deg);
+    opacity:0;
+  }
+
+  15%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.bigHeart,
+.heartCard{
+  font-size:110px;
+  cursor:pointer;
+  animation:heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat{
+
+  0%,100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.12);
+  }
+
+}
+
+
+/* =========================
+   BOUQUETS
+========================= */
+
+.bouquets{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.bouquet{
+  width:105px;
+  height:130px;
+  border-radius:25px;
+  background:white;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.bouquet:hover{
+  transform:translateY(-8px) scale(1.04);
+}
+
+.flower{
+  font-size:55px;
+}
+
+.bouquet p{
+  margin:3px 0;
+  font-size:13px;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photoBox{
+  width:90%;
+  max-width:330px;
+  padding:9px;
+  background:white;
+  border-radius:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.photoBox img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  border-radius:16px;
+  display:block;
+}
+
+
+/* =========================
+   YOU'RE
+========================= */
+
+.you{
+  font-size:27px;
+  color:#d6336c;
+  margin-top:18px;
+  font-weight:bold;
+}
+
+
+/* =========================
+   SCROLLING WORDS
+========================= */
+
+.scroller{
+  width:100%;
+  overflow:hidden;
+  white-space:nowrap;
+  margin-top:18px;
+}
+
+.scroller span{
+  display:inline-block;
+  padding-left:100%;
+  animation:scrollText 14s linear infinite;
+  font-size:19px;
+  color:#b52b58;
+  font-weight:bold;
+}
+
+@keyframes scrollText{
+
+  100%{
+    transform:translateX(-100%);
+  }
+
+}
+
+
+/* =========================
+   MEMORY COLLAGE
+========================= */
+
+.memoryCollage{
+  width:95%;
+  max-width:520px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin:20px auto;
+}
+
+.memoryCollage img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+  width:95%;
+  max-width:600px;
+  margin-top:22px;
+  background:rgba(255,255,255,.88);
+  padding:25px;
+  border-radius:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,.12);
+  line-height:1.75;
+  font-size:16px;
+  text-align:left;
+}
+
+.letterTitle{
+  text-align:center;
+  color:#d6336c;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+  max-width:500px;
+  width:100%;
+}
+
+.reason{
+  background:white;
+  margin:12px 0;
+  padding:15px 18px;
+  border-radius:18px;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  text-align:left;
+}
+
+
+/* =========================
+   AWARD
+========================= */
+
+.award{
+  border:4px solid #d4af37;
+  background:#fffdf1;
+  padding:30px 20px;
+  border-radius:25px;
+  max-width:500px;
+  box-shadow:0 10px 30px rgba(150,120,20,.2);
+}
+
+.award h2{
+  color:#b8860b;
+  font-size:30px;
+}
+
+.trophy{
+  font-size:70px;
+}
+
+
+/* =========================
+   HEART CARD
+========================= */
+
+.loveText{
+  font-size:24px;
+  color:#d6336c;
+  font-weight:bold;
+  max-width:500px;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.questionBtns{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  margin-top:25px;
+}
+
+.yesBtn,
+.noBtn{
+  border:none;
+  padding:12px 28px;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.yesBtn{
+  background:#d6336c;
+  color:white;
+}
+
+.noBtn{
+  background:#eee;
+  color:#555;
+}
+
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thanks{
+  max-width:500px;
+  font-size:20px;
+  line-height:1.7;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back{
+  margin-top:25px;
+  border:none;
+  background:white;
+  color:#d6336c;
+  padding:10px 20px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FLOATING KISSES
+===================================================== -->
+
+<div id="kisses"></div>
+
+
+
+<!-- =====================================================
+     PAGE 1
+     HAPPY BOYFRIEND DAY
+===================================================== -->
+
+<section id="intro" class="page">
+
+  <div style="font-size:70px;">
+    💋
+  </div>
+
+  <h1>
+    Happy Boyfriend Day ❤️
+  </h1>
+
+  <p class="subtitle">
+    To my favourite person, my pookie, my handsome boy 🥹❤️
+  </p>
+
+  <button class="startBtn" onclick="showHeart()">
+    Open your little surprise 💌
+  </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+     HEART
+===================================================== -->
+
+<section id="heartPage" class="page hidden">
+
+  <h1>
+    Something is waiting for you...
+  </h1>
+
+  <div class="bigHeart" onclick="showBouquets()">
+    ❤️
+  </div>
+
+  <p>
+    Tap the heart 💗
+  </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3
+     THREE BOUQUETS
+===================================================== -->
+
+<section id="bouquetPage" class="page hidden">
+
+  <h1>
+    For You 🌷
+  </h1>
+
+  <p>
+    Three little surprises for my favourite boy 💕
+  </p>
+
+  <div class="bouquets">
+
+
+    <!-- 1ST BOUQUET -->
+
+    <div class="bouquet" onclick="showFirstBouquet()">
+
+      <div class="flower">
+        💐
+      </div>
+
+      <p>
+        Open me
+      </p>
+
+    </div>
+
+
+
+    <!-- 2ND BOUQUET -->
+
+    <div class="bouquet" onclick="openSong()">
+
+      <div class="flower">
+        🌹
+      </div>
+
+      <p>
+        Music 🎵
+      </p>
+
+    </div>
+
+
+
+    <!-- 3RD BOUQUET -->
+
+    <div class="bouquet" onclick="showLetter()">
+
+      <div class="flower">
+        🌷
+      </div>
+
+      <p>
+        For you 💌
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     1ST BOUQUET
+     PHOTO + YOU'RE
+===================================================== -->
+
+<section id="firstBouquet" class="page hidden">
+
+
+  <!-- 🔴 https://ibb.co/6qfGg69-->
+
+  <div class="photoBox">
+
+    <img
+      src="FIRST_BOUQUET_PHOTO_URL"
+      alt="Our picture"
+    >
+
+  </div>
+
+
+  <div class="you">
+    You're ❤️
+  </div>
+
+
+  <!-- SCROLLING WORDS -->
+
+  <div class="scroller">
+
+    <span>
+      Pookie ✨ Handsome 🫶 Cutie 🥹 My favourite person ❤️
+      My comfort person 🌷 My special one 💕 My home 🫂
+    </span>
+
+  </div>
+
+
+  <button
+    class="startBtn"
+    onclick="showCollage()"
+  >
+    Continue 💗
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     1ST BOUQUET CONTINUE
+     6 PHOTO COLLAGE
+===================================================== -->
+
+<section id="collagePage" class="page hidden">
+
+  <h1>
+    Our Little Memories 📸❤️
+  </h1>
+
+  <p>
+    A few little moments that are special to me 🥹
+  </p>
+
+
+  <div class="memoryCollage">
+
+
+    <!-- 🔴 https://ibb.co/SXvVfrB0 -->
+
+    <img
+      src="PHOTO_1_URL"
+      alt="Memory 1"
+    >
+
+
+    <!-- 🔴 https://ibb.co/vxfJYQCq -->
+
+    <img
+      src="PHOTO_2_URL"
+      alt="Memory 2"
+    >
+
+
+    <!-- 🔴 https://ibb.co/gb6P31w2 -->
+
+    <img
+      src="PHOTO_3_URL"
+      alt="Memory 3"
+    >
+
+
+    <!-- 🔴 https://ibb.co/jvYgbW1J -->
+
+    <img
+      src="PHOTO_4_URL"
+      alt="Memory 4"
+    >
+
+
+    <!-- 🔴 https://ibb.co/Sjg5xz6 -->
+
+    <img
+      src="PHOTO_5_URL"
+      alt="Memory 5"
+    >
+
+
+    <!-- 🔴 https://ibb.co/6JTHmSKS -->
+
+    <img
+      src="PHOTO_6_URL"
+      alt="Memory 6"
+    >
+
+
+  </div>
+
+
+  <button
+    class="startBtn"
+    onclick="backToBouquets()"
+  >
+    Back to bouquets 💐
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     2ND BOUQUET
+     YOUTUBE SONG
+===================================================== -->
+
+<!--
+
+🔴 IMPORTANT:
+
+Neeche JavaScript mein apna YouTube link paste karna hai.
+
+Example:
+
+https://youtu.be/w8LcxY43N5Y?si=AacyQxfmn66wHLNe
+
+-->
+
+
+
+<!-- =====================================================
+     3RD BOUQUET
+     ONE DIFFERENT PHOTO + LETTER
+===================================================== -->
+
+<section id="letterPage" class="page hidden">
+
+
+  <!-- 🔴 https://ibb.co/YFFKD38m -->
+
+  <div class="photoBox">
+
+    <img
+      src="https://ibb.co/BHF3RP31"
+      alt="My favourite picture"
+    >
+
+  </div>
+
+
+  <div class="letter">
+
+
+    <div class="letterTitle">
+      The Sweet Letter For Him 💌
+    </div>
+
+
+    <p>
+      Sunoo... ❤️
+    </p>
+
+
+    <p>
+      I don't think I can ever properly explain how much you
+      mean to me, but I'll still try. You slowly became someone
+      who is not just a part of my life, but a very special part
+      of my heart. 🥹❤️
+    </p>
+
+
+    <p>
+      I love the little things about you — the way you make me
+      smile, the way you care, and the way you can make an
+      ordinary moment feel special.
+    </p>
+
+
+    <p>
+      We may have our silly fights and little misunderstandings,
+      but somehow we always find our way back to each other.
+      And honestly, that's one of the things I treasure about us. 🫶
+    </p>
+
+
+    <p>
+      Thank you for staying, for understanding me, for making me
+      smile and for being someone with whom I can be completely
+      myself.
+    </p>
+
+
+    <p>
+      I may not always know how to say everything perfectly,
+      but please know that you are incredibly special to me.
+      I'm really grateful that you're in my life. 💗
+    </p>
+
+
+    <p>
+      If I had to choose again, I'd still choose you. 🥹❤️
+    </p>
+
+
+    <p style="text-align:center;font-weight:bold;">
+      Happy Boyfriend Day, my pookie. 💋❤️
+    </p>
+
+
+  </div>
+
+
+  <button
+    class="startBtn"
+    onclick="showReasons()"
+  >
+    Continue ❤️
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     REASONS
+     SEPARATE PAGE
+===================================================== -->
+
+<section id="reasonsPage" class="page hidden">
+
+  <h1>
+    Reasons Why I Love You ❤️
+  </h1>
+
+
+  <div class="reasons">
+
+
+    <div class="reason">
+      ❤️ You make me smile without even trying.
+    </div>
+
+
+    <div class="reason">
+      🫶 I can be completely myself with you.
+    </div>
+
+
+    <div class="reason">
+      🥹 Your little caring things mean so much to me.
+    </div>
+
+
+    <div class="reason">
+      🌷 You make ordinary moments feel special.
+    </div>
+
+
+    <div class="reason">
+      💕 You understand the little things about me.
+    </div>
+
+
+    <div class="reason">
+      🫂 You make me feel loved and comfortable.
+    </div>
+
+
+    <div class="reason">
+      ✨ You have your own special place in my heart.
+    </div>
+
+
+    <div class="reason">
+      💗 Because you're simply you — and I love that.
+    </div>
+
+
+  </div>
+
+
+  <button
+    class="startBtn"
+    onclick="showAward()"
+  >
+    Continue 🏆
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     BEST BOYFRIEND AWARD
+     SEPARATE PAGE
+===================================================== -->
+
+<section id="awardPage" class="page hidden">
+
+
+  <div class="award">
+
+    <div class="trophy">
+      🏆
+    </div>
+
+
+    <h2>
+      BEST BOYFRIEND AWARD
+    </h2>
+
+
+    <p>
+      This award is proudly presented to
+    </p>
+
+
+    <h2>
+      MY HANDSOME GHUSURI ❤️
+    </h2>
+
+
+    <p>
+      For being my favourite person, my comfort person
+      and one of the most beautiful parts of my life. 🥹
+    </p>
+
+
+    <p>
+      <b>
+        Officially awarded with unlimited love & hugs 💕
+      </b>
+    </p>
+
+
+  </div>
+
+
+  <button
+    class="startBtn"
+    onclick="showHeartCard()"
+  >
+    Continue ❤️
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     YOU GET MY HEART
+     SEPARATE PAGE
+===================================================== -->
+
+<section id="heartCardPage" class="page hidden">
+
+  <h1>
+    You Get My Heart ❤️
+  </h1>
+
+
+  <div class="heartCard">
+    ❤️
+  </div>
+
+
+  <p class="loveText">
+    Out of everyone in this world,
+    somehow my heart chose you. 🥹
+  </p>
+
+
+  <p>
+    So yes... this little heart belongs to you. ❤️
+  </p>
+
+
+  <button
+    class="startBtn"
+    onclick="showQuestion()"
+  >
+    One last question... 💌
+  </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     DO YOU LOVE ME
+===================================================== -->
+
+<section id="questionPage" class="page hidden">
+
+  <h1>
+    Do You Love Me? 🥹❤️
+  </h1>
+
+
+  <p>
+    Be honest... 👀
+  </p>
+
+
+  <div class="questionBtns">
+
+
+    <button
+      class="yesBtn"
+      onclick="showThanks()"
+    >
+      YES ❤️
+    </button>
+
+
+    <button
+      class="noBtn"
+      onclick="moveNoButton(this)"
+    >
+      No 😭
+    </button>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL PAGE
+===================================================== -->
+
+<section id="thanksPage" class="page hidden">
+
+
+  <div style="font-size:80px;">
+    💗
+  </div>
+
+
+  <h1>
+    Thank You ❤️
+  </h1>
+
+
+  <div class="thanks">
+
+
+    <p>
+      Thank you for coming into my life and becoming
+      my best partner. 🥹❤️
+    </p>
+
+
+    <p>
+      Thank you for every smile, every little memory,
+      every moment of care and every beautiful moment
+      we've shared.
+    </p>
+
+
+    <p>
+      I'm really grateful that our paths crossed.
+      You are and will always be someone very special
+      to my heart. 🌷
+    </p>
+
+
+    <p>
+      <b>
+        Happy Boyfriend Day, my pookie. ❤️
+      </b>
+    </p>
+
+
+    <p>
+      With lots and lots of love... 💋
+    </p>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================
+   FLOATING KISSES
+========================= */
+
+const kissContainer =
+  document.getElementById("kisses");
+
+
+for(let i=0;i<25;i++){
+
+  let kiss =
+    document.createElement("div");
+
+  kiss.className="kiss";
+
+  kiss.innerHTML="💋";
+
+  kiss.style.left =
+    Math.random()*100+"%";
+
+  kiss.style.animationDuration =
+    (4+Math.random()*6)+"s";
+
+  kiss.style.animationDelay =
+    Math.random()*5+"s";
+
+  kissContainer.appendChild(kiss);
+
+}
+
+
+
+/* =========================
+   HIDE ALL PAGES
+========================= */
+
+function hideAll(){
+
+  document
+    .querySelectorAll(".page")
+    .forEach(page=>{
+      page.classList.add("hidden");
+    });
+
+}
+
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function showHeart(){
+
+  hideAll();
+
+  document
+    .getElementById("heartPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showBouquets(){
+
+  hideAll();
+
+  document
+    .getElementById("bouquetPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showFirstBouquet(){
+
+  hideAll();
+
+  document
+    .getElementById("firstBouquet")
+    .classList.remove("hidden");
+
+}
+
+
+function showCollage(){
+
+  hideAll();
+
+  document
+    .getElementById("collagePage")
+    .classList.remove("hidden");
+
+}
+
+
+function showLetter(){
+
+  hideAll();
+
+  document
+    .getElementById("letterPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showReasons(){
+
+  hideAll();
+
+  document
+    .getElementById("reasonsPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showAward(){
+
+  hideAll();
+
+  document
+    .getElementById("awardPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showHeartCard(){
+
+  hideAll();
+
+  document
+    .getElementById("heartCardPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showQuestion(){
+
+  hideAll();
+
+  document
+    .getElementById("questionPage")
+    .classList.remove("hidden");
+
+}
+
+
+function showThanks(){
+
+  hideAll();
+
+  document
+    .getElementById("thanksPage")
+    .classList.remove("hidden");
+
+}
+
+
+function backToBouquets(){
+
+  hideAll();
+
+  document
+    .getElementById("bouquetPage")
+    .classList.remove("hidden");
+
+}
+
+
+
+/* =========================
+   YOUTUBE SONG
+========================= */
+
+function openSong(){
+
+  /*
+  ==================================================
+  🔴🔴 PASTE YOUR YOUTUBE LINK HERE 🔴🔴
+
+  Example:
+
+  https://www.youtube.com/watch?v=ABC123
+
+  ==================================================
+  */
+
+  window.open(
+    "PASTE_YOUR_YOUTUBE_LINK_HERE",
+    "_blank"
+  );
+
+}
+
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+function moveNoButton(button){
+
+  button.style.position="absolute";
+
+  button.style.left =
+    Math.random()*70+"%";
+
+  button.style.top =
+    Math.random()*70+"%";
+
+}
+
+</script>
+
+
+</body>
+</html>
